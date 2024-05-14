@@ -1,118 +1,114 @@
-import Image from "next/image";
-import { Inter } from "next/font/google";
+import ImageSlider from "@/components/home/image-slider";
+import HomeItemList from "@/components/home/item-list";
+import HomePalList from "@/components/home/pal-list";
+import Link from "next/link";
 
-const inter = Inter({ subsets: ["latin"] });
+export default function HomePage() {
+     const slides = [
+          {
+               image: "https://firebasestorage.googleapis.com/v0/b/palpedia-nextjs.appspot.com/o/imageSlider%2Fhome_1.jpg?alt=media&token=54ba259b-7a50-45b0-9dbd-8c73c2c34133",
+          },
+          {
+               image: "https://firebasestorage.googleapis.com/v0/b/palpedia-nextjs.appspot.com/o/imageSlider%2Fhome_2.png?alt=media&token=b6d93362-36bc-4bbe-9219-bccc95fcaa9a",
+          },
+          {
+               image: "https://firebasestorage.googleapis.com/v0/b/palpedia-nextjs.appspot.com/o/imageSlider%2Fhome_3.png?alt=media&token=8b80c8f6-68c6-42fb-a24b-42e5a6aed756",
+          },
+          {
+               image: "https://firebasestorage.googleapis.com/v0/b/palpedia-nextjs.appspot.com/o/imageSlider%2Fhome_4.png?alt=media&token=91b92ce5-1886-46d0-9413-7748c35302b3",
+          },
+          {
+               image: "https://firebasestorage.googleapis.com/v0/b/palpedia-nextjs.appspot.com/o/imageSlider%2Fhome_5.png?alt=media&token=ebe8ce1d-5205-4545-8843-4421f18c56d0",
+          },
+          {
+               image: "https://firebasestorage.googleapis.com/v0/b/palpedia-nextjs.appspot.com/o/imageSlider%2Fhome_6.png?alt=media&token=065d7942-478e-412a-ae48-9384232881b0",
+          },
+     ];
 
-export default function Home() {
-  return (
-    <main
-      className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
-    >
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">pages/index.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+     return (
+          <div className="py-8">
+               <div className="flex flex-col gap-4 justify-center items-center w-full text-zinc-400 text-3xl">
+                    <h1 className="text-5xl">Palpedia</h1>
+                    <p>
+                         Better Insights, Bolder Adventures: PalPedia, Your Pal
+                         World Companion
+                    </p>
+                    <div className="image-slider">
+                         <ImageSlider slides={slides} />
+                    </div>
+                    <div className="border border-black-200 p-4 w-full rounded-lg bg-black-100 mb-4 text-center flex flex-col justify-center items-center gap-3 text-xl">
+                         <p>
+                              <span className="text-yellow-500">Palworld</span>
+                              is an action-adventure{" "}
+                              <span className="text-yellow-500">
+                                   survival game
+                              </span>{" "}
+                              by developer{" "}
+                              <span className="text-yellow-500">
+                                   Pocket Pair
+                              </span>
+                              . The game is set in an{" "}
+                              <span className="text-yellow-500">
+                                   open world
+                              </span>{" "}
+                              populated with{" "}
+                              <span className="text-yellow-500">
+                                   {" "}
+                                   animal-like creatures
+                              </span>{" "}
+                              known as
+                              <span className="text-yellow-500">Pals</span>. The
+                              players can{" "}
+                              <span className="text-yellow-500">
+                                   battle and capture
+                              </span>{" "}
+                              Pals in order to use them for base building,
+                              traversal, and combat.
+                         </p>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700/10 after:dark:from-sky-900 after:dark:via-[#0141ff]/40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+                         <p>
+                              Dive into Palworld with{" "}
+                              <span className="text-yellow-500">Paldex </span>{" "}
+                              by your side and explore, survive, and thrive in
+                              this vibrant and challenging environment.
+                         </p>
+                    </div>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Discover and deploy boilerplate example Next.js&nbsp;projects.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  );
+                    <div className="grid grid-cols-2 gap-8">
+                         <div className="palList flex flex-col gap-7">
+                              <h2>Palworld Pal List</h2>
+                              <p>
+                                   Browse all Pals currently in Palworld. Find
+                                   detailed information about each pal,
+                                   including type counters, skills and item
+                                   drops.
+                              </p>
+                              <HomePalList />
+                              <Link
+                                   className="py-2 px-4 bg-indigo-600 text-white hover:bg-indigo-500 rounded-lg"
+                                   href="/paldex"
+                              >
+                                   View the full Paldeck
+                              </Link>
+                         </div>
+                         <div className="itemList flex flex-col gap-7">
+                              <h2>Palworld Item List</h2>
+                              <p>
+                                   Browse all items currently in Palworld. Find
+                                   crafting recipes and use our calculators to
+                                   find the resources required for multiple
+                                   items.
+                              </p>
+                              <HomeItemList />
+                              <Link
+                                   className="py-2 px-4 bg-indigo-600 text-white hover:bg-indigo-500 rounded-lg"
+                                   href="/items"
+                              >
+                                   View the full Item list
+                              </Link>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     );
 }

@@ -2,32 +2,116 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+html {
+     font-size: 62.5%;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+     font-size: 1.6rem;
+     color: white;
+     background-color: rgba(14, 16, 20, 1);
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+nav {
+     padding: 0 10rem !important;
+}
+
+.main-wrapper {
+     padding: 0 15%;
+}
+
+.pal-list {
+     display: grid;
+     grid-template-columns: 1fr 1fr 1fr 1fr;
+     gap: 2rem;
+}
+
+.pal {
+     display: flex;
+     justify-content: start;
+     gap: 2rem;
+     align-items: center;
+     background-color: #8e919625;
+     border-radius: 1rem;
+     padding: 1.5rem 1rem 1.5rem 2rem;
+     color: rgb(203, 213, 225);
+}
+
+.item {
+     background-color: #8e919625;
+     color: rgb(203, 213, 225);
+     padding: 1.5rem 0rem 1.5rem 2rem;
+     border-radius: 1rem;
+}
+
+.pal-image img,
+.item-image img {
+     border-radius: 50%;
+     border: 2px solid rgb(164, 164, 164);
+}
+
+.pal-types {
+     display: flex;
+     justify-content: left;
+     gap: 3px;
+     align-items: center;
+}
+
+.typeFilters {
+     display: flex;
+     gap: 0.5rem;
+}
+
+#live-search-bar {
+     border-radius: 1rem;
+     overflow: hidden;
+}
+
+#live-search-bar:focus {
+     border-radius: 1rem;
+     overflow: hidden;
+     outline: none;
+}
+
+.all {
+     border: 1px rgb(142, 142, 142) solid;
+     height: 3.5rem;
+     width: 3.5rem;
+     border-radius: 0.5rem;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+.detailPalPage {
+     display: grid;
+     grid-template-columns: 7fr 3fr;
+     gap: 2rem;
+     background-color: inherit;
+}
+
+.errorMessage {
+     min-width: 26rem;
+     min-height: 26rem;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     text-wrap: wrap;
+}
+
+.imageHolder {
+     min-width: 90rem;
+     min-height: 52rem;
+     border-radius: 3rem;
+     overflow: hidden;
+}
+
+.duration-5000 {
+     transition-duration: 2000ms;
 }
