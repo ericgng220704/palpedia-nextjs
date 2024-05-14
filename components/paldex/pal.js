@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import getFireBaseImage from "@/lib/getFireBaseImage";
 import { useEffect, useState } from "react";
+import ElementImage from "./elementImage";
 
 export default function Pal({ pal }) {
      const [imageURL, setImageURL] = useState("");
@@ -40,18 +41,21 @@ export default function Pal({ pal }) {
                     <div>
                          <h3 className="mb-1">{pal.name}</h3>
                          <ul className="pal-types">
-                              {pal.types.map((type, index) => (
-                                   <li key={index + pal.id + type}>
-                                        <Image
-                                             src={
-                                                  type.image.split("/public")[1]
-                                             }
-                                             height={20}
-                                             width={20}
-                                             alt={type.name}
-                                        />
-                                   </li>
-                              ))}
+                              {pal.types.map((type, index) => {
+                                   const typeImagePath = `${
+                                        type.image.split("/elements/")[1]
+                                   }`;
+                                   return (
+                                        <li key={index + pal.id + type}>
+                                             <ElementImage
+                                                  element={typeImagePath}
+                                                  height={20}
+                                                  width={20}
+                                                  alt={type.name}
+                                             />
+                                        </li>
+                                   );
+                              })}
                          </ul>
                     </div>
                </div>

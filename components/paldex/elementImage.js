@@ -5,9 +5,8 @@ import Image from "next/image";
 export default function ElementImage({ element, height, width }) {
      const [imageURL, setImageURL] = useState("");
      const [imageName, setImageName] = useState("");
-
      useEffect(() => {
-          setImageName(element.imageName);
+          setImageName(element);
      }, [element]);
 
      useEffect(() => {

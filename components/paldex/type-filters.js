@@ -63,7 +63,7 @@ export default function TypeFilters({ setSelectedTypeFilter }) {
                                    }
                               >
                                    <ElementImage
-                                        element={type}
+                                        element={type.imageName}
                                         height={30}
                                         width={30}
                                    />
