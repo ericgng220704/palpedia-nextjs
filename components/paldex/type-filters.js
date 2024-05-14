@@ -1,42 +1,42 @@
-import Image from "next/image";
+import ElementImage from "./elementImage";
 
 export default function TypeFilters({ setSelectedTypeFilter }) {
      const types = [
           {
                name: "water",
-               image: "/images/elements/water.png",
+               imageName: "water.png",
           },
           {
                name: "fire",
-               image: "/images/elements/fire.png",
+               imageName: "fire.png",
           },
           {
                name: "ice",
-               image: "/images/elements/ice.png",
+               imageName: "ice.png",
           },
           {
                name: "grass",
-               image: "/images/elements/grass.png",
+               imageName: "grass.png",
           },
           {
                name: "neutral",
-               image: "/images/elements/neutral.png",
+               imageName: "neutral.png",
           },
           {
                name: "dark",
-               image: "/images/elements/dark.png",
+               imageName: "dark.png",
           },
           {
                name: "electric",
-               image: "/images/elements/electric.png",
+               imageName: "electric.png",
           },
           {
                name: "dragon",
-               image: "/images/elements/dragon.png",
+               imageName: "dragon.png",
           },
           {
                name: "ground",
-               image: "/images/elements/ground.png",
+               imageName: "ground.png",
           },
      ];
 
@@ -62,8 +62,8 @@ export default function TypeFilters({ setSelectedTypeFilter }) {
                                         setSelectedTypeFilter(type.name)
                                    }
                               >
-                                   <Image
-                                        src={type.image}
+                                   <ElementImage
+                                        element={type}
                                         height={30}
                                         width={30}
                                    />
