@@ -76,7 +76,7 @@ export default function HomePage() {
 
                     <div className="grid grid-cols-2 gap-8">
                          <div className="palList flex flex-col gap-7">
-                              <h2>Palworld Pal List</h2>
+                              <h2>PALWORLD PAL LIST</h2>
                               <p>
                                    Browse all Pals currently in Palworld. Find
                                    detailed information about each pal,
