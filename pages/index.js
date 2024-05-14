@@ -28,7 +28,7 @@ export default function HomePage() {
      return (
           <div className="py-8">
                <div className="flex flex-col gap-4 justify-center items-center w-full text-zinc-400 text-3xl">
-                    <h1 className="text-5xl">Palpedia</h1>
+                    <h1 className="text-5xl">PALPEDIA</h1>
                     <p>
                          Better Insights, Bolder Adventures: PalPedia, Your Pal
                          World Companion
