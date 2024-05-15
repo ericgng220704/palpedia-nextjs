@@ -4,7 +4,6 @@ import Image from "next/image";
 
 export default function MainNav() {
      const { data: session, status } = useSession();
-     console.log(session);
      if (status === "loading") {
           return <div>Loading...</div>;
      }
@@ -25,6 +24,9 @@ export default function MainNav() {
 
                          <li className="md:px-4 md:py-2 hover:text-yellow-400">
                               <Link href="/items">Items</Link>
+                         </li>
+                         <li className="md:px-4 md:py-2 hover:text-yellow-400">
+                              <Link href="/blog">Blog</Link>
                          </li>
                     </ul>
                     <div>

@@ -1,5 +1,10 @@
 import NextAuth from "next-auth/next";
 import GoogleProvider from "next-auth/providers/google";
+import { PrismaAdapter } from "@next-auth/prisma-adapter";
+import { PrismaClient } from "@prisma/client";
+
+const prisma = new PrismaClient();
+
 export default NextAuth({
      providers: [
           GoogleProvider({
@@ -8,8 +13,10 @@ export default NextAuth({
           }),
      ],
 
+     // adapter: PrismaAdapter(prisma),
+
      session: {
-          jwt: true,
+          strategy: "jwt",
      },
 
      jwt: {
@@ -23,7 +30,7 @@ export default NextAuth({
                     token.name = user.name;
                     token.picture = user.image;
                }
-
+               console.log("JWT TOKEN:" + token);
                return token;
           },
 
@@ -32,6 +39,7 @@ export default NextAuth({
                session.user.email = token.email;
                session.user.name = token.name;
                session.user.picture = token.picture;
+               console.log("SESSION:" + session);
                return session;
           },
      },
