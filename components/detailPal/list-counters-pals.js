@@ -40,10 +40,7 @@ export default function ListCounterPals({ palElement }) {
                {pals.map((pal) => {
                     const palDetailPath = `/paldex/${pal.id}`;
                     return (
-                         <li
-                              className="h-16 bg-black hover:text-yellow-400"
-                              key={pal.id}
-                         >
+                         <li className="hover:text-indigo-400" key={pal.id}>
                               <Link href={palDetailPath}>
                                    <div className="flex items-center gap-4 px-4 py-2">
                                         <PalImage

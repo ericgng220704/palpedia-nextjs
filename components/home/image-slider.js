@@ -37,14 +37,14 @@ const ImageSlider = ({ slides }) => {
      return (
           <section className="relative flex justify-center items-center">
                <FaArrowAltCircleLeft
-                    className="absolute top-1/2 left-8 text-white text-2xl cursor-pointer select-none z-10"
+                    className="icon-imageSlider absolute top-1/2 left-8 text-white text-2xl cursor-pointer select-none z-10"
                     onClick={() => {
                          prevSlide();
                          clearTimeoutRef();
                     }}
                />
                <FaArrowAltCircleRight
-                    className="absolute top-1/2 right-8 text-white text-2xl cursor-pointer select-none z-10"
+                    className="icon-imageSlider absolute top-1/2 right-8 text-white text-2xl cursor-pointer select-none z-10"
                     onClick={() => {
                          nextSlide();
                          clearTimeoutRef();
@@ -54,8 +54,8 @@ const ImageSlider = ({ slides }) => {
                     <div
                          className={
                               index === current
-                                   ? "opacity-100 transition-opacity duration-5000 flex justify-center items-center"
-                                   : "opacity-0 transition-opacity duration-5000"
+                                   ? "opacity-100 transition-opacity duration-5000 flex justify-center items-center imageContainer"
+                                   : "opacity-0 transition-opacity duration-5000 imageContainer"
                          }
                          key={index}
                     >

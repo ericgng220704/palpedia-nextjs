@@ -4,7 +4,7 @@ import { useState } from "react";
 export default function ItemsPage() {
      const [searchTerm, setSearchTerm] = useState("");
      return (
-          <>
+          <div className="font-medium text-zinc-400 text-3xl">
                <div className="mb-12 mt-8">
                     <input
                          id="live-search-bar"
@@ -24,6 +24,6 @@ export default function ItemsPage() {
                     </p>
                </div>
                <ItemList searchTerm={searchTerm} />
-          </>
+          </div>
      );
 }

@@ -7,7 +7,7 @@ export default function PaldexPage() {
      const [searchTerm, setSearchTerm] = useState("");
 
      return (
-          <>
+          <div className="Paldex text-zinc-400 text-3xl font-medium mt-8">
                <input
                     id="live-search-bar"
                     className="w-full py-4 px-6 text-black bg-white mb-8"
@@ -18,9 +18,9 @@ export default function PaldexPage() {
                     onChange={(e) => setSearchTerm(e.target.value)}
                />
 
-               <div className="grid grid-cols-2 mb-8">
-                    <div className="pr-36 py-6">
-                         <h2 className="text-4xl text-slate-300 mb-2">
+               <div className="group2 grid grid-cols-2 mb-8">
+                    <div className="dmm pr-36 py-6">
+                         <h2 className="text-4xl text-zinc-300 mb-2">
                               PalWorld Paldex
                          </h2>
                          <p className=" text-slate-400 text-3xl">
@@ -40,6 +40,6 @@ export default function PaldexPage() {
                     searchTerm={searchTerm}
                     selectedTypeFilter={selectedTypeFilter}
                />
-          </>
+          </div>
      );
 }

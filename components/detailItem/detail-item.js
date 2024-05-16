@@ -45,12 +45,12 @@ export default function DetailItem({ item }) {
                     <h2 className="text-3xl text-slate-300 mb-2">
                          About {item.name}
                     </h2>
-                    <div className="grid grid-cols-2 gap-8">
-                         <div className="bg-black flex justify-between py-3 px-6 rounded-lg">
+                    <div className="flex flex-col">
+                         <div className=" flex gap-8 py-3 rounded-lg">
                               <span>Weight: </span>
                               <span className="text-white">{item.weight}</span>
                          </div>
-                         <div className="bg-black flex justify-between py-3 px-6 rounded-lg">
+                         <div className=" flex gap-8 py-3 rounded-lg">
                               <span>Gold: </span>
                               <span className="text-white">{item.gold}</span>
                          </div>

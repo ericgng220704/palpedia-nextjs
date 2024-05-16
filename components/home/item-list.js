@@ -35,11 +35,11 @@ export default function HomeItemList() {
                     const itemDetailPath = `/items/${item.key}`;
                     return (
                          <li
-                              className="h-16 bg-black hover:text-yellow-400"
+                              className=" hover:text-indigo-100 rounded-lg border-b border-b-zinc-100"
                               key={item.key}
                          >
                               <Link href={itemDetailPath}>
-                                   <div className="flex items-center gap-4 px-4 py-2">
+                                   <div className="flex items-center gap-4 h-24">
                                         <ItemImage
                                              item={item}
                                              height={30}

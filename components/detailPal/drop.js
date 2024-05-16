@@ -28,7 +28,7 @@ export default function Drop({ drop }) {
      }, [imageName]);
 
      return (
-          <li className="bg-black p-4">
+          <li className="py-2">
                <Link href="#">
                     <div className="flex justify-between">
                          <Image src={imageURL} height={30} width={30} alt="" />

@@ -37,8 +37,10 @@ export default function Counters({ pal }) {
 
      return (
           <div>
-               <div>
-                    <h2>{pal.name} Counters</h2>
+               <div className="flex flex-col gap-4 mb-8">
+                    <h2 className="font-semibold text-4xl">
+                         {pal.name} Counters
+                    </h2>
                     <p>
                          {pal.name} is a{" "}
                          {capitalizeFirstLetter(counter.primaryElement)} Pal.{" "}

@@ -43,11 +43,11 @@ export default function DetailPalPage() {
      }
      return (
           <div className="detailPalPage">
-               <div>
+               <div className="">
                     <DetailPal pal={pal} />
                </div>
 
-               <div className="py-14 flex flex-col gap-8">
+               <div className="py-14 flex flex-col gap-8 text-zinc-400 text-3xl font-medium">
                     <div className="map">
                          <PalSpawnMap pal={pal} />
                     </div>

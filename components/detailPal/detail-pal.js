@@ -27,30 +27,32 @@ export default function DetailPal({ pal }) {
      }, [imageName]);
 
      return (
-          <div className="px-10 py-14 text-slate-400 text-2xl">
+          <div className="px-10 py-14 text-zinc-400 text-3xl font-medium">
                <div className="mb-8">
                     <Image
-                         className="rounded-lg"
+                         className="rounded-full bg-indigo-100"
                          src={imageURL}
                          height={150}
                          width={150}
                          alt={pal.name}
                     />
                </div>
-               <div className="mb-4">
-                    <h1 className="text-4xl text-slate-300 mb-2">{pal.name}</h1>
+               <div className="mb-12">
+                    <h1 className="text-4xl text-zinc-300 font-bold mb-2">
+                         {pal.name}
+                    </h1>
                     <p>Paldeck entry #{pal.id}</p>
                </div>
 
-               <div className="mb-4">
-                    <h2 className="text-3xl text-slate-300 mb-2">
+               <div className="mb-12">
+                    <h2 className="text-3xl  mb-2 text-zinc-300 font-semibold">
                          About {pal.name}
                     </h2>
                     <p className="text-wrap">{pal.description}</p>
                </div>
 
-               <div className="mb-4">
-                    <h2 className="text-3xl text-slate-300 mb-2">
+               <div className="mb-12">
+                    <h2 className="text-3xl text-zinc-300 font-semibold mb-2">
                          Work Suitability
                     </h2>
                     <ul className="grid grid-cols-3 gap-10">
@@ -67,20 +69,20 @@ export default function DetailPal({ pal }) {
                     </ul>
                </div>
 
-               <div className="mb-4">
-                    <h2 className="text-3xl text-slate-300 mb-2">
+               <div className="mb-12">
+                    <h2 className="text-3xl text-zinc-300 font-semibold mb-2">
                          {pal.name} Partner Skill
                     </h2>
                     <div className="py-8 px-6 flex gap-5 flex-col bg-black rounded-lg">
-                         <h3 className="text-3xl text-slate-300 mb-2">
+                         <h3 className="text-3xl text-zinc-300 font-semibold mb-2">
                               {pal.aura.name}
                          </h3>
                          <p>{pal.aura.description}</p>
                     </div>
                </div>
 
-               <div className="mb-4">
-                    <h2 className="text-3xl text-slate-300 mb-2">
+               <div className="mb-12">
+                    <h2 className="text-3xl text-zinc-300 font-semibold mb-2">
                          {pal.name} Stats
                     </h2>
                     <div className="grid grid-cols-2 gap-8">
@@ -139,8 +141,8 @@ export default function DetailPal({ pal }) {
                     </div>
                </div>
 
-               <div className="mb-4">
-                    <h2 className="text-3xl text-slate-300 mb-2">
+               <div className="mb-12">
+                    <h2 className="text-3xl text-zinc-300 font-semibold mb-2">
                          {pal.name} Breeding
                     </h2>
                     <div className="grid grid-cols-2 gap-8">
@@ -159,8 +161,8 @@ export default function DetailPal({ pal }) {
                     </div>
                </div>
 
-               <div className="mb-4">
-                    <h2 className="text-3xl text-slate-300 mb-2">
+               <div className="mb-12">
+                    <h2 className="text-3xl text-zinc-300 font-semibold mb-2">
                          Extra Information
                     </h2>
                     <div className="grid grid-cols-2 gap-8">
@@ -204,8 +206,8 @@ export default function DetailPal({ pal }) {
                     </div>
                </div>
 
-               <div className="mb-4">
-                    <h2 className="text-3xl text-slate-300 mb-2">
+               <div className="mb-12">
+                    <h2 className="text-3xl text-zinc-300 font-semibold mb-2">
                          {pal.name} Skills
                     </h2>
                     <p>

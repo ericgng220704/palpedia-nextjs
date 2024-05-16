@@ -39,7 +39,7 @@ export default function ItemList({ searchTerm }) {
      });
 
      return (
-          <div className="grid grid-cols-3 gap-12">
+          <div className="item-list  grid grid-cols-3 gap-12">
                {filteredItems.map((item) => {
                     return <Item key={item.key} item={item} />;
                })}

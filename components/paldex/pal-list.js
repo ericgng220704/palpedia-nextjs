@@ -42,7 +42,7 @@ export default function PalList({ searchTerm, selectedTypeFilter }) {
      });
 
      return (
-          <div className="pal-list">
+          <div className="pal-list text-3xl">
                {filteredPals.map((pal) => (
                     <Pal key={pal.id} pal={pal} />
                ))}

@@ -16,10 +16,17 @@ body {
      font-size: 1.6rem;
      color: white;
      background-color: rgba(14, 16, 20, 1);
+     font-family: "Roboto", sans-serif;
 }
 
 nav {
      padding: 0 10rem !important;
+}
+
+.group1 {
+     display: flex;
+     align-items: center;
+     gap: 8rem;
 }
 
 .main-wrapper {
@@ -97,8 +104,8 @@ nav {
 }
 
 .errorMessage {
-     min-width: 26rem;
-     min-height: 26rem;
+     min-width: 30rem;
+     min-height: 30rem;
      display: flex;
      justify-content: center;
      align-items: center;
@@ -107,11 +114,237 @@ nav {
 
 .imageHolder {
      min-width: 90rem;
-     min-height: 52rem;
-     border-radius: 3rem;
+     min-height: 60rem;
+     border-radius: 1rem;
      overflow: hidden;
 }
 
 .duration-5000 {
      transition-duration: 2000ms;
+}
+
+.burger-menu {
+     display: none;
+}
+
+.links--responsive {
+     display: none;
+}
+
+@media (max-width: 1350px) {
+     .home-buttons {
+          width: 80%;
+     }
+
+     .pal-list {
+          grid-template-columns: 1fr 1fr 1fr;
+     }
+}
+
+@media (max-width: 1200px) {
+     .viewfullP {
+          margin-bottom: 3rem;
+     }
+}
+
+@media (max-width: 1000px) {
+     .icon-imageSlider {
+          display: none;
+     }
+
+     .imageContainer {
+          width: 100%;
+          height: 30rem;
+     }
+
+     .imageHolder {
+          width: 100% !important;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 30rem !important;
+     }
+
+     .imageHolder img {
+          width: 60rem;
+          height: 30rem;
+          border-radius: 1rem;
+     }
+
+     .group2 {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+     }
+
+     .typeFilters {
+          justify-content: flex-start;
+          order: 0;
+     }
+
+     .dmm {
+          order: 1;
+     }
+}
+
+@media (max-width: 900px) {
+     html {
+          font-size: 55%;
+     }
+
+     .item-list {
+          grid-template-columns: 1fr 1fr !important;
+     }
+}
+
+@media (max-width: 800px) {
+     .viewfullP {
+          font-size: 1.6rem;
+     }
+     .home-buttons {
+          font-size: 1.6rem;
+     }
+
+     .burger-menu {
+          display: block;
+          cursor: pointer;
+     }
+
+     .logo {
+          order: 1;
+     }
+     .profile {
+          order: 2;
+     }
+
+     .group1 {
+          gap: 0.5rem;
+     }
+
+     .links {
+          display: none;
+     }
+
+     .links--responsive {
+          display: flex;
+     }
+}
+
+@media (max-width: 700px) {
+     .home-list {
+          display: flex;
+          flex-direction: column;
+     }
+
+     .home-list p {
+          height: 3rem;
+     }
+
+     .burger-menu svg {
+          height: 2rem;
+          width: 2rem;
+     }
+
+     .pal-list {
+          grid-template-columns: 1fr 1fr;
+     }
+
+     .item-list {
+          grid-template-columns: 1fr !important;
+          width: 50%;
+     }
+}
+
+@media (max-width: 700px) {
+     html {
+          font-size: 50%;
+     }
+}
+
+@media (max-width: 600px) {
+     .imageContainer {
+          width: 100%;
+          height: 20rem;
+     }
+
+     .imageHolder {
+          width: 100% !important;
+          height: 20rem !important;
+     }
+
+     .imageHolder img {
+          width: 40rem;
+          height: 20rem;
+          border-radius: 1rem;
+     }
+}
+
+@media (max-width: 500px) {
+     .main-nav {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 1rem;
+          margin-top: 1rem;
+          margin-right: -5rem;
+          margin-left: -5rem;
+     }
+
+     .group1 {
+          order: 1;
+     }
+     .profile {
+          order: 0;
+     }
+
+     .profile img {
+          height: 3rem;
+          width: 3rem;
+     }
+
+     html {
+          font-size: 45%;
+     }
+
+     .Paldex {
+          margin-top: 4rem;
+     }
+
+     .links--responsive {
+          margin-top: 4rem;
+     }
+}
+
+@media (max-width: 400px) {
+     .palpedia-p {
+          font-size: 1.6rem;
+     }
+
+     .palpedia h1 {
+          font-size: 3rem;
+     }
+
+     .palworld {
+          display: none;
+     }
+
+     .viewfullP {
+          margin-bottom: 5rem;
+     }
+
+     .pal-list {
+          grid-template-columns: 1fr;
+     }
+
+     .item-list a {
+          width: 80%;
+     }
+}
+
+@media (max-width: 300px) {
+     .viewfullP {
+          margin-bottom: 7rem;
+     }
+     html {
+          font-size: 40%;
+     }
 }

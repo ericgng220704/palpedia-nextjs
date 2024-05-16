@@ -39,8 +39,8 @@ export default function PalSpawnMap({ pal }) {
      }
 
      return (
-          <div className="text-slate-400 text-2xl">
-               <h2 className="text-3xl text-slate-300 mb-2">
+          <div className="">
+               <h2 className="text-4xl font-semibold mb-2">
                     {pal.name} Spawn Location
                </h2>
                <div>
@@ -56,8 +56,8 @@ export default function PalSpawnMap({ pal }) {
                          <Image
                               src={imageURL}
                               alt={`${pal.name} location during ${dayState}`}
-                              height={300}
-                              width={300}
+                              height={330}
+                              width={330}
                          />
                     )}
                     <div className="flex justify-between bg-black py-4 px-2">
@@ -68,7 +68,7 @@ export default function PalSpawnMap({ pal }) {
                          </p>
                          <button
                               onClick={toggleDayState}
-                              className=" text-yellow-400 hover:text-yellow-200"
+                              className=" text-indigo-400 hover:text-indigo-200"
                          >
                               Switch to {dayState === "day" ? "Night" : "Day"}
                          </button>

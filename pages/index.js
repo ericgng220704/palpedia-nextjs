@@ -27,39 +27,43 @@ export default function HomePage() {
 
      return (
           <div className="py-8">
-               <div className="flex flex-col gap-4 justify-center items-center w-full text-zinc-400 text-3xl">
-                    <h1 className="text-5xl">PALPEDIA</h1>
-                    <p>
-                         Better Insights, Bolder Adventures: PalPedia, Your Pal
-                         World Companion
-                    </p>
+               <div className="flex flex-col gap-4 justify-center items-center w-full text-zinc-400 text-3xl font-medium">
+                    <div className="palpedia text-center my-8 flex flex-col gap-4 text-4xl">
+                         <h1 className="text-6xl font-bold text-indigo-300">
+                              PALPEDIA
+                         </h1>
+                         <p className="palpedia-p">
+                              Better Insights, Bolder Adventures: PalPedia, Your
+                              Pal World Companion
+                         </p>
+                    </div>
                     <div className="image-slider">
                          <ImageSlider slides={slides} />
                     </div>
-                    <div className="border border-black-200 p-4 w-full rounded-lg bg-black-100 mb-4 text-center flex flex-col justify-center items-center gap-3 text-xl">
+                    <div className="palworld border border-black-200 p-4 w-full rounded-lg bg-black-100 mb-4 text-center flex flex-col justify-center items-center gap-3 text-2xl">
                          <p>
-                              <span className="text-yellow-500">Palworld</span>
+                              <span className="text-indigo-500">Palworld</span>{" "}
                               is an action-adventure{" "}
-                              <span className="text-yellow-500">
+                              <span className="text-indigo-500">
                                    survival game
                               </span>{" "}
                               by developer{" "}
-                              <span className="text-yellow-500">
+                              <span className="text-indigo-500">
                                    Pocket Pair
                               </span>
                               . The game is set in an{" "}
-                              <span className="text-yellow-500">
+                              <span className="text-indigo-500">
                                    open world
                               </span>{" "}
                               populated with{" "}
-                              <span className="text-yellow-500">
+                              <span className="text-indigo-500">
                                    {" "}
                                    animal-like creatures
                               </span>{" "}
                               known as
-                              <span className="text-yellow-500">Pals</span>. The
+                              <span className="text-indigo-500">Pals</span>. The
                               players can{" "}
-                              <span className="text-yellow-500">
+                              <span className="text-indigo-500">
                                    battle and capture
                               </span>{" "}
                               Pals in order to use them for base building,
@@ -68,44 +72,52 @@ export default function HomePage() {
 
                          <p>
                               Dive into Palworld with{" "}
-                              <span className="text-yellow-500">Paldex </span>{" "}
+                              <span className="text-indigo-500">Paldex </span>{" "}
                               by your side and explore, survive, and thrive in
                               this vibrant and challenging environment.
                          </p>
                     </div>
 
-                    <div className="grid grid-cols-2 gap-8">
-                         <div className="palList flex flex-col gap-7">
-                              <h2>PALWORLD PAL LIST</h2>
-                              <p>
+                    <div className="home-list grid grid-cols-2 gap-4 my-12">
+                         <div className="flex flex-col gap-4 bg-zinc-900 py-8 px-6 rounded-2xl">
+                              <h2 className="text text-3xl text-zinc-300 font-semibold">
+                                   PALWORLD PAL LIST
+                              </h2>
+                              <p className="h-28 viewfullP">
                                    Browse all Pals currently in Palworld. Find
                                    detailed information about each pal,
                                    including type counters, skills and item
                                    drops.
                               </p>
                               <HomePalList />
-                              <Link
-                                   className="py-2 px-4 bg-indigo-600 text-white hover:bg-indigo-500 rounded-lg"
-                                   href="/paldex"
-                              >
-                                   View the full Paldeck
-                              </Link>
+                              <div className="mt-8 flex justify-center items-center">
+                                   <Link
+                                        className="home-buttons py-4 px-6 bg-indigo-600 text-white hover:bg-indigo-500 rounded-lg w-1/2 flex justify-center items-center"
+                                        href="/paldex"
+                                   >
+                                        View the full Paldeck
+                                   </Link>
+                              </div>
                          </div>
-                         <div className="itemList flex flex-col gap-7">
-                              <h2>Palworld Item List</h2>
-                              <p>
+                         <div className="flex flex-col gap-4 bg-zinc-900 py-8 px-6 rounded-2xl">
+                              <h2 className="text text-3xl text-zinc-300 font-semibold">
+                                   Palworld Item List
+                              </h2>
+                              <p className="h-28 viewfullP">
                                    Browse all items currently in Palworld. Find
                                    crafting recipes and use our calculators to
                                    find the resources required for multiple
                                    items.
                               </p>
                               <HomeItemList />
-                              <Link
-                                   className="py-2 px-4 bg-indigo-600 text-white hover:bg-indigo-500 rounded-lg"
-                                   href="/items"
-                              >
-                                   View the full Item list
-                              </Link>
+                              <div className="mt-8 flex justify-center items-center">
+                                   <Link
+                                        className="home-buttons py-4 px-6 bg-indigo-600 text-white hover:bg-indigo-500 rounded-lg w-1/2 flex justify-center items-center"
+                                        href="/items"
+                                   >
+                                        View the full Item List
+                                   </Link>
+                              </div>
                          </div>
                     </div>
                </div>
