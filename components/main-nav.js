@@ -43,6 +43,10 @@ export default function MainNav() {
                               <li className="md:px-4 md:py-2 hover:text-indigo-100">
                                    <Link href="/items">Items</Link>
                               </li>
+
+                              <li className="md:px-4 md:py-2 hover:text-indigo-100">
+                                   <Link href="/posts">Blog</Link>
+                              </li>
                          </ul>
                     </div>
                     <div className="profile">
@@ -62,7 +66,11 @@ export default function MainNav() {
                                    </div>
                               </div>
                          ) : (
-                              <button onClick={() => signIn("google")}>
+                              <button
+                                   onClick={() => {
+                                        signIn("google");
+                                   }}
+                              >
                                    Sign In
                               </button>
                          )}

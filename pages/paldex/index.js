@@ -32,6 +32,7 @@ export default function PaldexPage() {
                     <div className="h-full">
                          <TypeFilters
                               setSelectedTypeFilter={setSelectedTypeFilter}
+                              selectedTypeFilter={selectedTypeFilter}
                          />
                     </div>
                </div>

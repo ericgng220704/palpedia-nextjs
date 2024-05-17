@@ -1,6 +1,9 @@
 import ElementImage from "./elementImage";
 
-export default function TypeFilters({ setSelectedTypeFilter }) {
+export default function TypeFilters({
+     setSelectedTypeFilter,
+     selectedTypeFilter,
+}) {
      const types = [
           {
                name: "water",
@@ -42,7 +45,14 @@ export default function TypeFilters({ setSelectedTypeFilter }) {
 
      return (
           <ul className="typeFilters h-full flex justify-end items-center">
-               <li key="all" className="all">
+               <li
+                    key="all"
+                    className={`all ${
+                         selectedTypeFilter === "all"
+                              ? "bg-indigo-200 text-zinc-700"
+                              : null
+                    }`}
+               >
                     <button
                          key="all"
                          onClick={() => setSelectedTypeFilter("all")}
@@ -54,7 +64,11 @@ export default function TypeFilters({ setSelectedTypeFilter }) {
                     return (
                          <li
                               key={type.name}
-                              className="p-2 flex justify-center items-center bg-gray-800 h-14 w-14 rounded-lg"
+                              className={`p-2 flex justify-center items-center bg-gray-800 h-14 w-14 rounded-lg ${
+                                   selectedTypeFilter === type.name
+                                        ? "bg-indigo-200 text-zinc-700"
+                                        : null
+                              }`}
                          >
                               <button
                                    key={type.name}

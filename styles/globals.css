@@ -113,8 +113,13 @@ nav {
 }
 
 .imageHolder {
-     width: 90rem;
-     height: 60rem;
+     width: 120rem;
+     height: 80rem;
+}
+
+.imageHolder img {
+     width: 120rem;
+     height: 80rem;
      border-radius: 1rem;
 }
 
@@ -130,6 +135,16 @@ nav {
      display: none;
 }
 
+.blog-main {
+     display: grid;
+     grid-template-columns: 8fr 2fr;
+     gap: 2rem;
+}
+
+.post:hover .overlay {
+     opacity: 0.8;
+}
+
 @media (max-width: 1350px) {
      .home-buttons {
           width: 80%;
@@ -143,6 +158,20 @@ nav {
 @media (max-width: 1200px) {
      .viewfullP {
           margin-bottom: 3rem;
+     }
+
+     .imageHolder {
+          width: 100% !important;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: fit-content !important;
+     }
+
+     .imageHolder img {
+          width: 100rem;
+          height: 50rem;
+          border-radius: 1rem;
      }
 }
 
