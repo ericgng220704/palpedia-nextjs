@@ -171,7 +171,7 @@ export default function BlogPage({ hashtags }) {
                               <div className="blog-page-right py-6 pl-16">
                                    <div className=" py-8 px-2 flex flex-col gap-12">
                                         <h2 className="text-4xl">
-                                             Explore Topics
+                                             EXPLORE TOPICS
                                         </h2>
                                         <ul className="flex flex-col justify-center gap-4">
                                              {hashtags.map((hashtag) => {
