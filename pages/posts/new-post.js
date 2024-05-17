@@ -77,7 +77,7 @@ export default function NewPostPage({ hashtags, authors, session }) {
      };
 
      return (
-          <div className="w-3/4 mx-auto p-4 text-zinc-400 font-semibold 4xl">
+          <div className="w-3/4 mx-auto p-4 text-zinc-400 font-semibold 4xl newPostPage">
                <h1 className="text-5xl font-bold mb-4 text-indigo-300">
                     Create a New Post
                </h1>
@@ -123,7 +123,7 @@ export default function NewPostPage({ hashtags, authors, session }) {
                               )}
                          </label>
                     </div>
-                    <div className="grid grid-cols-2 gap-8">
+                    <div className="grid grid-cols-2 gap-8 group3">
                          <div>
                               <label htmlFor="hashtags">Hashtags</label>
                               <select

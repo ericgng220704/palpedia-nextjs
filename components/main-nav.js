@@ -90,6 +90,10 @@ export default function MainNav() {
                          <li className=" hover:text-indigo-100 py-8 px-4 flex justify-center items-center text-3xl bg-zinc-900 border-b border-zinc-600">
                               <Link href="/items">Items</Link>
                          </li>
+
+                         <li className=" hover:text-indigo-100 py-8 px-4 flex justify-center items-center text-3xl bg-zinc-900 border-b border-zinc-600">
+                              <Link href="/blogs">Blogs</Link>
+                         </li>
                     </ul>
                ) : null}
           </>

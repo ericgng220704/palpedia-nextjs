@@ -89,7 +89,7 @@ export default function BlogPage({ hashtags }) {
           : allPosts;
 
      return (
-          <div className={`text-3xl text-zinc-400 font-medium`}>
+          <div className={`text-3xl text-zinc-400 font-medium postPage`}>
                <h1 className="text-6xl font-bold text-indigo-200 mb-8">
                     Palpeida community
                </h1>
@@ -121,7 +121,7 @@ export default function BlogPage({ hashtags }) {
                                         </h2>
                                         {session.user.email ===
                                         "giahaonguyen2207@gmail.com" ? (
-                                             <div className="flex gap-4">
+                                             <div className="flex gap-4 admin-buttons">
                                                   <button
                                                        onClick={() =>
                                                             SetDeleteMode(
