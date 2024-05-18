@@ -88,9 +88,9 @@ export default function BlogPage({ hashtags }) {
             })
           : allPosts;
 
-     const isAdmin =
-          session.user.email === "giahaonguyen2207@gmail.com" ||
-          session.user.email === "thu01112004@gmail.com";
+     // const isAdmin =
+     //      session.user.email === "giahaonguyen2207@gmail.com" ||
+     //      session.user.email === "thu01112004@gmail.com";
 
      return (
           <div className={`text-3xl text-zinc-400 font-medium postPage`}>
@@ -123,7 +123,10 @@ export default function BlogPage({ hashtags }) {
                                                   {filteredPosts.length}
                                              </span>
                                         </h2>
-                                        {isAdmin ? (
+                                        {session.user.email ===
+                                             "giahaonguyen2207@gmail.com" ||
+                                        session.user.email ===
+                                             "thu01112004@gmail.com" ? (
                                              <div className="flex gap-4 admin-buttons">
                                                   <button
                                                        onClick={() =>
