@@ -10,7 +10,7 @@ export default function HomePalList() {
           async function fetchCounterPals() {
                try {
                     setIsLoading(true);
-                    const response = await fetch("/api/homepallist");
+                    const response = await fetch("/api/mongodb/homepallist");
 
                     const data = await response.json();
                     console.log(data);

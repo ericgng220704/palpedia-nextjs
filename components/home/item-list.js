@@ -10,7 +10,7 @@ export default function HomeItemList() {
           async function fetchCounterPals() {
                try {
                     setIsLoading(true);
-                    const response = await fetch("/api/homeItemList");
+                    const response = await fetch("/api/mongodb/homeItemList");
 
                     const data = await response.json();
                     console.log(data);

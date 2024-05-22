@@ -2,6 +2,7 @@ import "@/styles/globals.css";
 import { SessionProvider } from "next-auth/react";
 import MainNav from "@/components/main-nav";
 import Head from "next/head";
+import Footer from "@/components/footer";
 
 export default function App({ Component, pageProps }) {
      return (
@@ -16,6 +17,7 @@ export default function App({ Component, pageProps }) {
                <div className="main-wrapper">
                     <Component {...pageProps} />
                </div>
+               <Footer />
           </SessionProvider>
      );
 }

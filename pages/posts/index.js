@@ -94,13 +94,13 @@ export default function BlogPage({ hashtags }) {
 
      return (
           <div className={`text-3xl text-zinc-400 font-medium postPage`}>
-               <h1 className="text-6xl font-bold text-indigo-200 mb-8">
+               <h1 className="text-5xl font-bold text-indigo-200 mb-8">
                     Palpeida community
                </h1>
 
                {session ? (
                     <div>
-                         <h2 className="text-4xl font-semibold text-white ">
+                         <h2 className="text-3xl font-semibold text-white ">
                               {isNewUser ? "Hi, " : "Welcome back, "}
                               {session.user.name} !
                          </h2>

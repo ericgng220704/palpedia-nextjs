@@ -9,7 +9,7 @@ export default function ItemList({ searchTerm }) {
           async function fetchItems() {
                try {
                     setIsLoading(true);
-                    const response = await fetch("/api/items");
+                    const response = await fetch("/api/mongodb/items");
 
                     if (!response.ok) {
                          throw new Error(`Status: ${response.status}`);

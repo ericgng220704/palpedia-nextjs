@@ -3,10 +3,12 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { useRouter } from "next/router";
 
 export default function MainNav() {
      const { data: session, status } = useSession();
      const [isOpen, setIsOpen] = useState(false);
+     const router = useRouter();
 
      const toggleMenu = () => {
           setIsOpen(!isOpen);
@@ -32,19 +34,67 @@ export default function MainNav() {
                          </div>
 
                          <ul className="links flex gap-10">
-                              <li className="md:px-4 md:py-2 hover:text-indigo-100">
+                              <li
+                                   className={`md:px-4 md:py-2 hover:text-indigo-100 ${
+                                        router.pathname === "/"
+                                             ? "text-indigo-300"
+                                             : null
+                                   }`}
+                              >
                                    <Link href="/">Home</Link>
                               </li>
 
-                              <li className="md:px-4 md:py-2 hover:text-indigo-100">
+                              <li
+                                   className={`md:px-4 md:py-2 hover:text-indigo-100 ${
+                                        router.pathname.includes("/paldex")
+                                             ? "text-indigo-300"
+                                             : null
+                                   }`}
+                              >
                                    <Link href="/paldex">PalDex</Link>
                               </li>
 
-                              <li className="md:px-4 md:py-2 hover:text-indigo-100">
+                              <li
+                                   className={`md:px-4 md:py-2 hover:text-indigo-100 ${
+                                        router.pathname.includes("/items")
+                                             ? "text-indigo-300"
+                                             : null
+                                   }`}
+                              >
                                    <Link href="/items">Items</Link>
                               </li>
 
-                              <li className="md:px-4 md:py-2 hover:text-indigo-100">
+                              <li
+                                   className={`md:px-4 md:py-2 hover:text-indigo-100 ${
+                                        router.pathname.includes(
+                                             "/passive-skills"
+                                        )
+                                             ? "text-indigo-300"
+                                             : null
+                                   }`}
+                              >
+                                   <Link href="/passive-skills">
+                                        Passive Skills
+                                   </Link>
+                              </li>
+
+                              <li
+                                   className={`md:px-4 md:py-2 hover:text-indigo-100 ${
+                                        router.pathname.includes("/breeding")
+                                             ? "text-indigo-300"
+                                             : null
+                                   }`}
+                              >
+                                   <Link href="/breeding">Breeding</Link>
+                              </li>
+
+                              <li
+                                   className={`md:px-4 md:py-2 hover:text-indigo-100 ${
+                                        router.pathname.includes("/posts")
+                                             ? "text-indigo-300"
+                                             : null
+                                   }`}
+                              >
                                    <Link href="/posts">Blog</Link>
                               </li>
                          </ul>

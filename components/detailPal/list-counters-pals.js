@@ -10,13 +10,16 @@ export default function ListCounterPals({ palElement }) {
           async function fetchCounterPals() {
                try {
                     setIsLoading(true);
-                    const response = await fetch("/api/findPalsWithEl", {
-                         method: "POST",
-                         headers: {
-                              "Content-type": "application/json",
-                         },
-                         body: JSON.stringify({ type: palElement }),
-                    });
+                    const response = await fetch(
+                         "/api/mongodb/findPalsWithEl",
+                         {
+                              method: "POST",
+                              headers: {
+                                   "Content-type": "application/json",
+                              },
+                              body: JSON.stringify({ type: palElement }),
+                         }
+                    );
 
                     const data = await response.json();
 

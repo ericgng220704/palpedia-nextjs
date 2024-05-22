@@ -11,13 +11,16 @@ export default function Counters({ pal }) {
           async function fetchCounter() {
                try {
                     setIsLoading(true);
-                    const response = await fetch(`/api/findCounterElement`, {
-                         method: "POST",
-                         headers: {
-                              "Content-type": "application/json",
-                         },
-                         body: JSON.stringify({ palElement: palElement }),
-                    });
+                    const response = await fetch(
+                         `/api/mongodb/findCounterElement`,
+                         {
+                              method: "POST",
+                              headers: {
+                                   "Content-type": "application/json",
+                              },
+                              body: JSON.stringify({ palElement: palElement }),
+                         }
+                    );
                     const data = await response.json();
 
                     setCounter(data[0]);

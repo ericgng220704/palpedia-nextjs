@@ -9,7 +9,7 @@ export default function PalList({ searchTerm, selectedTypeFilter }) {
           async function fetchPaldex() {
                try {
                     setIsLoading(true);
-                    const response = await fetch("/api/paldex");
+                    const response = await fetch("/api/mongodb/paldex");
 
                     if (!response.ok) {
                          throw new Error(`Status: ${response.status}`);
