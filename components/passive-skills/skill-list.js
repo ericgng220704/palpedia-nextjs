@@ -41,7 +41,7 @@ export default function SkillList({ searchTerm }) {
                          <p>DESCRIPTION</p>
                     </div>
                </div>
-               {selectedSkills.map((skill) => {
+               {selectedSkills.map((skill, index) => {
                     let nameColor;
                     if (skill.tier > 1) {
                          nameColor = "text-yellow-500 opacity-95";
@@ -50,16 +50,26 @@ export default function SkillList({ searchTerm }) {
                     } else {
                          nameColor = "text-zinc-400";
                     }
+
+                    let description;
+                    if (skill.positive && skill.negative) {
+                         description = skill.positive + ", " + skill.negative;
+                    } else if (skill.positive) {
+                         description = skill.positive;
+                    } else if (skill.negative) {
+                         description = skill.negative;
+                    }
                     return (
-                         <div className="passiveSkill-item py-6 border-b border-solid border-zinc-800">
+                         <div
+                              className="passiveSkill-item py-6 border-b border-solid border-zinc-800"
+                              key={index}
+                         >
                               <span className={`${nameColor}`}>
                                    {capitalizeFirstLetter(skill.name)}
                               </span>
                               <div className="flex gap-4 opacity-80">
-                                   <p>
-                                        {skill.positive
-                                             ? skill.positive + ", "
-                                             : "" + skill.negative}
+                                   <p className="hover:text-white">
+                                        {description}
                                    </p>
                               </div>
                          </div>

@@ -10,6 +10,7 @@
 
 html {
      font-size: 62.5%;
+     position: relative;
 }
 
 body {
@@ -148,6 +149,23 @@ nav {
 .passiveSkill-item {
      display: grid;
      grid-template-columns: 3fr 7fr;
+}
+
+.selectPalOverlay {
+     width: 100%;
+}
+
+.max-h-120 {
+     max-height: 35rem;
+}
+
+.max-h-150 {
+     max-height: 45rem;
+}
+
+.calculator--1 {
+     display: grid;
+     grid-template-columns: 2.5fr 7.5fr;
 }
 
 @media (max-width: 1350px) {

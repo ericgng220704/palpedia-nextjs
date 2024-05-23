@@ -27,8 +27,8 @@ export default function Footer() {
                          </h2>
                          <div>
                               <p>
-                                   Hi, I'm Eric, please take a tour around my
-                                   personal project.
+                                   Hi, I&apos;m Eric, please take a tour around
+                                   my personal project.
                               </p>
                               <p>
                                    Feel interested? say hello to me, I really
