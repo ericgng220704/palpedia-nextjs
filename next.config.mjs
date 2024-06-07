@@ -14,6 +14,7 @@ const nextConfig = {
                     port: "",
                },
           ],
+          unoptimized: true,
      },
 };
 
